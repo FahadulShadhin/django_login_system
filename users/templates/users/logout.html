@@ -1,0 +1,12 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+    <br>
+    <div class="alert alert-success" role="alert">
+        <p style="text-align: center;">Logged out!</p>
+    </div>
+
+    <h3>Login again?</h3>
+    <a href="{% url 'login' %}">---> Login</a> <br>
+    <a href="{% url 'home' %}"><--- Or go back to home.</a>
+{% endblock content %}

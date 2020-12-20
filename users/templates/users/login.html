@@ -1,0 +1,13 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+  <br>
+  <div class="alert alert-success" role="alert">
+    <h3 style="text-align: center;">Login</h3>
+  </div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+{% endblock content%}
