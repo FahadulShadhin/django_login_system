@@ -35,9 +35,15 @@
 
 {% block content %}
     <br>
-    <div class="alert alert-success" role="alert">
-        <h1>Welcome to Authentication System</h1>
-    </div>
+    {% if user.is_authenticated %}
+        <div class="alert alert-success" role="alert">
+            <h1>Welcome {{ user.username }}!</h1>
+        </div>
+    {% else %}
+        <div class="alert alert-success" role="alert">
+            <h1>Welcome to Authentication System!</h1>
+        </div>
+    {% endif %}
     <br>
     <div class="center">
         {% if user.is_authenticated %}
